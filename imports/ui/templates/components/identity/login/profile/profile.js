@@ -17,22 +17,6 @@ Template.profile.helpers({
   userId() {
     return Meteor.user()._id;
   },
-  socialMediaLogin() {
-    if (Meteor.user().profile.credentials !== undefined) {
-      for (let i = 0; i < Meteor.user().profile.credentials.length; i += 1) {
-        if (Meteor.user().profile.credentials[i].validated) {
-          return true;
-        }
-      }
-    }
-    return false;
-  },
-  verifiedMail() {
-    if (Meteor.settings.public.app.config.mailNotifications) {
-      return Meteor.user().emails[0].verified;
-    }
-    return true;
-  },
   hasDelegations() {
     // TODO implement delegation reader to display them.
     return false;

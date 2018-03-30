@@ -3,7 +3,6 @@ import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
 
 import './logger.html';
-import './emailLogin.js';
 import './blockchainLogin.js';
 
 let currentTab = 0;
